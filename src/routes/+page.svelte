@@ -104,16 +104,16 @@
 
   <h1 class="text-center text-sm text-[#E0E1DD]">{data.weatherData.weather[0].description}</h1>
 
-  <h1 class="text-[#E0E1DD] text-[2rem] text-center mt-12">{data.weatherData.main.temp}º</h1>
+  <h1 class="text-[#E0E1DD] text-[2rem] text-center mt-12">{Math.round(data.weatherData.main.temp)}º</h1>
 
   <h1 class="text-[1.9rem] ml-[3rem] mt-[4.8rem] text-[#E0E1DD]">High:</h1>
 
-  <h1 class="ml-[3.6rem] text-[1.1rem] text-[#E0E1DD]">{data.weatherData.main.temp_max}º</h1>
+  <h1 class="ml-[4.7rem] text-[1.1rem] text-[#E0E1DD]">{Math.round(data.weatherData.main.temp_max)}º</h1>
 
   <div class="-mt-[4.5rem]">
     <h1 class="text-right mr-[3.6rem] text-[1.9rem] ml-[3rem] text-[#E0E1DD]">Low:</h1>
 
-    <h1 class=" text-right mr-[4rem] text-[1.1rem] text-[#E0E1DD]">{data.weatherData.main.temp_min}º</h1>
+    <h1 class=" text-right mr-[4.7rem] text-[1.1rem] text-[#E0E1DD]">{Math.round(data.weatherData.main.temp_min)}º</h1>
   </div>
 
   <div class="flex flex-col mt-12 gap-3">
@@ -158,12 +158,12 @@
       <p class="text-[#E0E1DD] font-bold mt-1 ml-4">Tomorrow</p>
       <hr class="absolute h-[2rem] w-[0.01rem] ml-[8.1rem] mt-[8.5rem] bg-[#E0E1DD]">
       <p class="text-[#E0E1DD] text-[1rem] font-bold ml-[5rem] mt-1">{data.weatherForecast.list[0].weather[0].description}</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">T. Max: {data.weatherForecast.list[0].main.temp_max}º</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4">T. Min: {data.weatherForecast.list[0].main.temp_min}º</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem]">Wind: {data.weatherForecast.list[0].wind.speed} km/h</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">T. Max: {Math.round(data.weatherForecast.list[0].main.temp_max)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4">T. Min: {Math.round(data.weatherForecast.list[0].main.temp_min)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem]">Wind: {Math.round(data.weatherForecast.list[0].wind.speed)} km/h</p>
       <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] ">Clouds: {data.weatherForecast.list[0].clouds.all}%</p>
 
-      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{data.weatherForecast.list[0].main.temp}º</p>
+      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{Math.round(data.weatherForecast.list[0].main.temp)}º</p>
       <img src="{icon_url_tomorrow}" alt="Weather Icon" class=" h-[6rem] w-auto ml-[8.5rem] -mt-[4.2rem]">
     </div>
     
@@ -177,12 +177,12 @@
       <p class="text-[#E0E1DD] font-bold mt-1 ml-4">{twoDayslaterName}</p>
       <hr class="absolute h-[2rem] w-[0.01rem] ml-[8.1rem] mt-[8.5rem] bg-[#E0E1DD]">
       <p class="text-[#E0E1DD] text-[1rem] font-bold ml-[5rem] mt-1">{data.weatherForecast.list[1].weather[0].description}</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">Pressure: {data.weatherForecast.list[1].main.pressure} hpa</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 ">Humidity: {data.weatherForecast.list[1].main.humidity} g.m<sup>3</sup></p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem]">Wind: {data.weatherForecast.list[1].wind.speed} km/h</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">T. Max: {Math.round(data.weatherForecast.list[1].main.temp_max)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 ">T. Min: {Math.round(data.weatherForecast.list[1].main.temp_min)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem]">Wind: {Math.round(data.weatherForecast.list[1].wind.speed)} km/h</p>
       <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] ">Clouds: {data.weatherForecast.list[1].clouds.all}%</p>
 
-            <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{data.weatherForecast.list[1].main.temp}º</p>
+            <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{Math.round(data.weatherForecast.list[1].main.temp)}º</p>
       <img src="{icon_url_2dayslater}" alt="Weather Icon" class=" h-[6rem] w-auto ml-[8.5rem] -mt-[4.2rem]">
     </div>
     
@@ -198,12 +198,12 @@
       <p class="text-[#E0E1DD] font-bold mt-1 ml-4">{threeDayslaterName}</p>
       <hr class="absolute h-[2rem] w-[0.01rem] ml-[8.1rem] mt-[8.5rem] bg-[#E0E1DD]">
       <p class="text-[#E0E1DD] text-[1rem] font-bold ml-[5rem] mt-1 ">{data.weatherForecast.list[2].weather[0].description}</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">Pressure: {data.weatherForecast.list[2].main.pressure} hpa</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 ">Humidity: {data.weatherForecast.list[2].main.humidity} g.m<sup>3</sup></p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem] ">Wind: {data.weatherForecast.list[2].wind.speed} km/h</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">T. Max: {Math.round(data.weatherForecast.list[2].main.temp_max)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 ">T. Min: {Math.round(data.weatherForecast.list[2].main.temp_min)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem] ">Wind: {Math.round(data.weatherForecast.list[2].wind.speed)} km/h</p>
       <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] ">Clouds: {data.weatherForecast.list[2].clouds.all}%</p>
 
-      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{data.weatherForecast.list[2].main.temp}º</p>
+      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{Math.round(data.weatherForecast.list[2].main.temp)}º</p>
       <img src="{icon_url_3dayslater}" alt="Weather Icon" class=" h-[6rem] w-auto ml-[8.5rem] -mt-[4.2rem]">
     </div>
     
@@ -216,12 +216,12 @@
       <p class="text-[#E0E1DD] font-bold mt-1 ml-4">{fourDayslaterName}</p>
       <hr class="absolute h-[2rem] w-[0.01rem] ml-[8.1rem] mt-[8.5rem] bg-[#E0E1DD]">
       <p class="text-[#E0E1DD] text-[1rem] font-bold ml-[5rem] mt-1">{data.weatherForecast.list[3].weather[0].description}</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">Pressure: {data.weatherForecast.list[3].main.pressure} hpa</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 ">Humidity: {data.weatherForecast.list[3].main.humidity} g.m<sup>3</sup></p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem] ">Wind: {data.weatherForecast.list[3].wind.speed} km/h</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">T. Max: {Math.round(data.weatherForecast.list[3].main.temp_max)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 ">T. Min: {Math.round(data.weatherForecast.list[3].main.temp_min)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem] ">Wind: {Math.round(data.weatherForecast.list[3].wind.speed)} km/h</p>
       <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] ">Clouds: {data.weatherForecast.list[3].clouds.all}%</p>
 
-      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem]">{data.weatherForecast.list[3].main.temp}º</p>
+      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem]">{Math.round(data.weatherForecast.list[3].main.temp)}º</p>
       <img src="{icon_url_4dayslater}" alt="Weather Icon" class=" h-[6rem] w-auto ml-[8.5rem] -mt-[4.2rem]">
     </div>
     
@@ -236,12 +236,12 @@
       <p class="text-[#E0E1DD] font-bold mt-1 ml-4">{fiveDayslaterName}</p>
       <hr class="absolute h-[2rem] w-[0.01rem] ml-[8.1rem] mt-[8.5rem] bg-[#E0E1DD]">
       <p class="text-[#E0E1DD] text-[1rem] font-bold ml-[5rem] mt-1">{data.weatherForecast.list[4].weather[0].description}</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">Pressure: {data.weatherForecast.list[4].main.pressure} hpa</p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-4  ">Humidity: {data.weatherForecast.list[4].main.humidity} g.m<sup>3</sup></p>
-      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem] ">Wind: {data.weatherForecast.list[4].wind.speed} km/h</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4 mt-[6.5rem]">T. Max: {Math.round(data.weatherForecast.list[4].main.temp_max)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-4  ">T. Min: {Math.round(data.weatherForecast.list[4].main.temp_min)}º</p>
+      <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] -mt-[2.4rem] ">Wind: {Math.round(data.weatherForecast.list[4].wind.speed)} km/h</p>
       <p class="text-[#E0E1DD] text-[0.8rem] ml-[8.7rem] ">Clouds: {data.weatherForecast.list[4].clouds.all}%</p>
 
-      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{data.weatherForecast.list[4].main.temp}º</p>
+      <p class="text-[#E0E1DD] text-[2rem] ml-6 -mt-[7.5rem] ">{Math.round(data.weatherForecast.list[4].main.temp)}º</p>
       <img src="{icon_url_5dayslater}" alt="Weather Icon" class=" h-[6rem] w-auto ml-[8.5rem] -mt-[4.2rem]">
     </div>
     
@@ -249,7 +249,33 @@
   </div>  
 
 </div>
+
+  <h1 class="mt-[3em] ml-[6rem] font-bold text-[1.5rem] text-[#E0E1DD]">Today's highlights</h1>
+
+    <div class=" ml-[10rem] w-60 h-[13rem] mt-[5.5rem] rounded-[1rem] bg-[#0D1B2A]"> 
+        <h1 class="text-[#E0E1DD] pt-5 pl-9">Wind speed</h1>
+        <h1 class="text-[2rem] text-center mt-9">{Math.round(data.weatherData.wind.speed)} Km/h</h1>
+      </div>
+
+      <div class=" ml-[30rem] w-60 h-[13rem] -mt-[13rem] rounded-[1rem] bg-[#0D1B2A]"> 
+        <h1 class="text-[#E0E1DD] pt-5 pl-9">Humidity</h1>
+        <h1 class="text-[2rem] text-center mt-9">{data.weatherData.main.humidity} gm<sup>3</sup></h1>
+      </div>
+
+      <div class=" ml-[50rem] w-60 h-[13rem] -mt-[13rem] rounded-[1rem] bg-[#0D1B2A]"> 
+        <h1 class="text-[#E0E1DD] pt-5 pl-9">Visibility</h1>
+        <h1 class="text-[2rem] text-center mt-9">{data.weatherData.visibility} Meters </h1>
+      </div>
+
+      <div class=" ml-[71rem] w-60 h-[13rem] -mt-[13rem] rounded-[1rem] bg-[#0D1B2A]"> 
+        <h1 class="text-[#E0E1DD] pt-5 pl-9">Pressure</h1>
+        <h1 class="text-[2rem] text-center mt-9">{data.weatherData.main.pressure} hpa</h1>
+      </div> 
+
 </div>
+
+
+
 
 <div style="position:absolute; bottom:0; right:0;">
   <h1 class="text-right text-[#E0E1DD] mr-1 text-sm ">Powered by <a href="https://openweathermap.org/" target="_blank" rel="noreferrer">OpenWeatherAPI</a></h1>
